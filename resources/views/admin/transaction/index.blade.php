@@ -36,7 +36,8 @@
                                     <td>{{ $checkout->user->name }}</td>
                                     <td class="text-center"><img src="{{ $checkout->image }}" style="width: 300px"></td>
                                     <td class="text-center">{{ $checkout->product->title }}</td>
-                                    <td>{{ $checkout->total_harga }}</td>
+                                    <td>{{ "Rp " . number_format($checkout->total_harga, 0, ',', '.') }}</td>
+
                                 </tr>
                                 @endforeach
                             </tbody>

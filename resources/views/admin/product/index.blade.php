@@ -49,7 +49,7 @@
                                         $products->perPage() }}</th>
                                     <td>{{ $product->title }}</td>
                                     <td class="text-center"><img src="{{ $product->image }}" style="width: 300px"></td>
-                                    <td>{{ $product->price }}</td>
+                                    <td>{{ "Rp " . number_format($product->price, 0, ',', '.') }}</td>
                                     <td class="text-center">
                                         <a href="{{ route('product.edit', $product->id) }}"
                                             class="btn btn-sm btn-primary">
